@@ -1,0 +1,23 @@
+ <div class="main">
+  
+    <div class="sub">
+        <h2>Search Here</h2>
+        <input type="text" placeholder="Enter movie name" [(ngModel)]="movieName" (input)="onInputChange()">
+        <button (click)="searchMovie()">Search</button>
+      </div>
+      <div class="a">
+        <div class="b"> 
+      <div class="centered-div" id="text" *ngIf="movieData">
+        <p><strong>{{ movieData.Title }}<span id="title"></span></strong></p> 
+        <p ><strong>Released: {{ movieData.Released }} <span id="year"></span></strong></p>
+        <p ><strong>Actors: {{ movieData.Actors }}<span id="imdb"></span></strong></p>
+        <p ><strong>Plot: {{ movieData.Plot }} <span id="type"></span></strong></p>
+        <p ><strong>Ratings: {{ movieData.Ratings[0].Value }} <span id="type"></span></strong></p>
+
+    
+        <img [src]="movieData.Poster" alt="Movie Poster">
+      </div> 
+    </div>
+    </div>
+    </div>
+    
